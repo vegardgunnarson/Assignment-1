@@ -15,5 +15,4 @@ public class MageTests {
 
         assertEquals(expect,actual);
     }
-
 }

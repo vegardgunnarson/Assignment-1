@@ -80,7 +80,7 @@ public abstract class Hero {
     }
 
     /**
-     * Checks if this hero is allowed to carry this weapon and equips or replaces if allowed
+     * Checks if this hero is allowed to carry this weapon and equips/replaces if allowed
      * @param weapon
      * @throws InvalidWeaponException
      */
@@ -122,7 +122,7 @@ public abstract class Hero {
     }
 
     /**
-     * Checks if this hero is allowed to carry this armor and equips or replaces if allowed
+     * Checks if this hero is allowed to carry this armor and equips/replaces if allowed
      * @param armor
      * @throws InvalidArmorException
      */
@@ -213,7 +213,7 @@ public abstract class Hero {
 
 
     public String getItems() {
-        // This function was implemented mainly for development reasons, but can be nice to have in game.
+        // This function was implemented mainly for development reasons, but can be nice to have in game. YAGNI
         if (equipment.get(Slot.WEAPON)==null) {
             System.out.println("Weapon: No weapon");
         }

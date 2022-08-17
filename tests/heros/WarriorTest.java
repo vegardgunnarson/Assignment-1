@@ -8,6 +8,9 @@ import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
 
 public class WarriorTest {
+    /**
+     * Test 7 from assignment 1
+     */
     @Test
     public void warriorDpsTest(){
         Warrior warrior = new Warrior("Wardon");
@@ -17,6 +20,11 @@ public class WarriorTest {
 
         assertEquals(expect,actual);
     }
+
+    /**
+     * Test 8 from assignment 1
+     * @throws InvalidWeaponException
+     */
     @Test
     public void warriorDpsWeaponTest() throws InvalidWeaponException {
         Warrior warrior = new Warrior("Wardon");
@@ -33,6 +41,12 @@ public class WarriorTest {
         assertEquals(expect,actual);
 
     }
+
+    /**
+     * Test 9 from assignment 1
+     * @throws InvalidWeaponException
+     * @throws InvalidArmorException
+     */
     @Test
     public void warriorDpsWeaponArmorTest() throws InvalidWeaponException, InvalidArmorException {
         Warrior warrior = new Warrior("Wardon");
