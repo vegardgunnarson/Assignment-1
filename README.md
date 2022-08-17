@@ -51,7 +51,7 @@ and armors:
 ### Structure for source files and tests <br />
 ```
 .
-|-- Main.java
+|-- Main.java         			
 |-- attributes
 |   `-- Attributes.java
 |-- enumerators
@@ -76,6 +76,7 @@ and armors:
 
 ## Install
 Clone git repo
+
 Open folder in IDE
 		
 ## Usage
