@@ -10,6 +10,8 @@
 
 [Maintainers](#Maintainers)
 
+[Licence](#Licence)
+
 
 ## Background 
 
@@ -93,4 +95,7 @@ Right click on tests-folder and choose Run 'All Tests'
 
 ## Maintainers
 Vegard Gunnarson
+
+## Licence
+Open
 		
