@@ -83,5 +83,5 @@ Open folder in IDE
 Right click on tests-folder and choose Run 'All Tests'
 
 ## Maintainers
-@VegardGunnarson
+Vegard Gunnarson
 		
