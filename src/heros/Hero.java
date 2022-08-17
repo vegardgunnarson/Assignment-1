@@ -6,11 +6,10 @@ import items.*;
 import enumerators.*;
 import java.util.HashMap;
 
-/* This is the parent class of all heros/characters in the game.
+/** This is the parent class of all heros/characters in the game.
  * All methods can be used by all heros
  * @author Vegard Gunnarson
  */
-
 public abstract class Hero {
     String name;
     int level;
@@ -38,7 +37,6 @@ public abstract class Hero {
         equipment.put(Slot.HEAD,null);
         equipment.put(Slot.BODY,null);
         equipment.put(Slot.LEGS,null);
-
     }
 
     /**
@@ -90,20 +88,19 @@ public abstract class Hero {
         boolean allowed = this.legalWeapon.get(type)!=null;
         //checks if required level is higher than hero level - must be less or equal
         boolean levelReq = weapon.getReqLevel()<=getLevel();
-        if (allowed&&levelReq){
-            if (equipment.get(Slot.WEAPON)==null){
-                equipment.put(Slot.WEAPON,weapon);
-                System.out.println("Weapon equipped");
-                this.weapon = weapon;
-                this.hasWeapon=true;
+            if (allowed && levelReq) {
+                if (equipment.get(Slot.WEAPON) == null) {
+                    equipment.put(Slot.WEAPON, weapon);
+                    System.out.println("Weapon equipped");
+                    this.weapon = weapon;
+                    this.hasWeapon = true;
+                } else {
+                    equipment.put(Slot.WEAPON, weapon);
+                    System.out.println("Weapon replaced");
+                    this.weapon = weapon;
+                    this.hasWeapon = true;
+                }
             }
-            else {
-                equipment.put(Slot.WEAPON,weapon);
-                System.out.println("Weapon replaced");
-                this.weapon = weapon;
-                this.hasWeapon=true;
-            }
-        }
         else{
             throw new InvalidWeaponException("Invalid weapon");
         }
@@ -151,6 +148,7 @@ public abstract class Hero {
     }
 
     public void getLegalArmor() {
+        //YAGNI, but nice to have
         System.out.println(legalArmor.keySet());
     }
 

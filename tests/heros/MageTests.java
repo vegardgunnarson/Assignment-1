@@ -5,14 +5,34 @@ import org.junit.jupiter.api.Test;
 import static org.junit.Assert.assertEquals;
 
 public class MageTests {
+    /**
+     * Test 1 from assignment 1
+     */
     @Test
-    public void attributeTest() {
+    public void checkLevelTest() {
         Mage m = new Mage("Maggie");
-        m.setLevel(4);
+        int expected = 1;
+        int actual = m.getLevel();
 
-        int expect = 8+3*5;
-        int actual = m.getIntelligence();
+        assertEquals(expected,actual);
+    }
+
+    /**
+     * Test 2 from assignment 1
+     */
+    @Test
+    public void gainLevelTest() {
+        Mage m = new Mage("Maggie");
+        m.levelUp();
+
+        int expect = 2;
+        int actual = m.getLevel();
 
         assertEquals(expect,actual);
     }
+
+
+
+
+
 }

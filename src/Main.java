@@ -1,49 +1,44 @@
-import attributes.Attributes;
 import exceptions.*;
 import heros.*;
 import items.*;
 import enumerators.*;
 
-
+/**
+ * Runnable Main class where you can test all implemented features of the game
+ */
 public class Main {
     public static void main(String[] args) throws InvalidWeaponException, InvalidArmorException {
         Mage Vegard = new Mage("Vegard");
-        Vegard.getStats();
-        System.out.println(Vegard.getIntelligence());
         Vegard.getLegalWeapon();
-        Weapon Wand_1 = new Weapon("Rifle",1, WeaponType.WAND);
-        Weapon Oeks = new Weapon("Oeks",1,WeaponType.WAND);
-        System.out.println(Vegard.getWeapon());
-        Vegard.setLevel(5);
-        System.out.println(Vegard.getWeapon());
-        Vegard.equipWeapon(Oeks);
-        System.out.println(Vegard.getWeapon());
-        Armor hjelm = new Armor("Hjelm",61, ArmorType.CLOTH);
-        Armor leggb = new Armor("Leggbeskytter",1, ArmorType.MAIL);
-        Armor kropp = new Armor("Redningsvest",1, ArmorType.CLOTH);
-        hjelm.setIntelligence(150);
-        leggb.setIntelligence(200);
-        Wand_1.setAttackSpeed(23);
-        System.out.println(Wand_1.getDps());
+        Vegard.getLegalArmor();
+        Weapon w1 = new Weapon("Common Wand",1, WeaponType.WAND);
+        Weapon w2 = new Weapon("Common Axe",300,WeaponType.AXE);
+        Armor a1 = new Armor("Helmet",61, ArmorType.CLOTH);
+        Armor a2 = new Armor("Pants",1, ArmorType.MAIL);
+        Armor a3 = new Armor("Flotation Device",1, ArmorType.CLOTH);
+        a1.setIntelligence(13);
+        w1.setAttackSpeed(23);
+        w1.setDamage(3);
 
-        hjelm.setSlot(Slot.HEAD);
-        leggb.setSlot(Slot.LEGS);
-        kropp.setSlot(Slot.BODY);
+        a1.setSlot(Slot.HEAD);
+        a2.setSlot(Slot.LEGS);
+        a3.setSlot(Slot.BODY);
 
         Vegard.setLevel(2);
-        try{
-        Vegard.equipArmor(hjelm);
-        }catch(InvalidArmorException e){}
-        Vegard.equipArmor(kropp);
-        Vegard.equipArmor(kropp);
-        System.out.println("Weapon damage: "+Wand_1.getDamage());
+        try {
+            Vegard.equipWeapon(w1);
+        }catch (InvalidWeaponException e){
+            System.out.println(e.getMessage());}
+        try {
+            Vegard.equipArmor(a3);;
+        }catch (InvalidArmorException e){
+            System.out.println(e.getMessage());}
+        try {
+            Vegard.equipArmor(a2);;
+        }catch (InvalidArmorException e){
+            System.out.println(e.getMessage());}
+
         Vegard.getStats();
-        Vegard.setLevel(1);
-        hjelm.setDexterity(5);
-        System.out.println(Vegard.getDexterity());
-
-
-
-
+        Vegard.getItems();
     }
 }

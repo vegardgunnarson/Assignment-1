@@ -39,27 +39,5 @@ public abstract class Item {
         return reqLevel;
     }
 
-    /**
-     * Returns attribute given from AttributesEnum
-     * Only used by armor. Weapon does currently not have these attributes.
-     * @param attr AttrubutesEnum.DEXTERITY/STRENGTH/INTELLIGENCE
-     * @return Value of Attribute
-     */
-    /*
-    public int get(AttributesEnum attr) {
-        if (attr == AttributesEnum.DEXTERITY){
-            return Armor.dexterity;
-        }
-        if (attr == AttributesEnum.INTELLIGENCE){
-            return Armor.intelligence;
-        }
-        if (attr == AttributesEnum.STRENGTH){
-            return Armor.strength;
-        }
-        return 0;
-
-
-    }
-    */
 }
 

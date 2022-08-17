@@ -3,7 +3,6 @@ package items;
 import enumerators.Slot;
 import enumerators.WeaponType;
 import exceptions.InvalidWeaponException;
-import heros.Mage;
 import heros.Warrior;
 import org.junit.jupiter.api.Test;
 

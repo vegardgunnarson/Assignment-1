@@ -6,7 +6,7 @@ import heros.Ranger;
 import heros.Rouge;
 import heros.Warrior;
 
-/* This class is used for returning attributes that is predefined.
+/** This class is used for returning attributes that is predefined.
  * @author Vegard Gunnarson
  */
 
