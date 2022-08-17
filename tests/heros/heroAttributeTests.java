@@ -82,7 +82,7 @@ public class heroAttributeTests {
     }
 
 
-    
+
 
     /**
      * Task 4 from assignment 1
