@@ -146,7 +146,7 @@ public abstract class Hero {
             }
         }
         else {
-            throw new InvalidArmorException("Invalid Armor");
+            throw new InvalidArmorException("Invalid armor");
         }
     }
 
@@ -158,15 +158,15 @@ public abstract class Hero {
         this.level++;
     }
     public int getDexterity() {
-        int dexterity = Attributes.getHeroDexterity(this.getClass(),this.level);
+        int dexterity = Attributes.getHeroDexterity(this.getClass(),this.level) + Armor.getEquipmentMainStat(equipment, AttributesEnum.DEXTERITY);
         return dexterity;
     }
     public int getStrength() {
-        int strength = Attributes.getHeroStrength(this.getClass(),this.level);
+        int strength = Attributes.getHeroStrength(this.getClass(),this.level)+ Armor.getEquipmentMainStat(equipment, AttributesEnum.STRENGTH);
         return strength;
     }
     public int getIntelligence() {
-        int intelligence = Attributes.getHeroIntelligence(this.getClass(),this.level);
+        int intelligence = Attributes.getHeroIntelligence(this.getClass(),this.level)+ Armor.getEquipmentMainStat(equipment, AttributesEnum.INTELLIGENCE);
         return intelligence;
     }
 

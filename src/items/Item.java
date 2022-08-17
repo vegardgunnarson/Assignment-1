@@ -45,6 +45,7 @@ public abstract class Item {
      * @param attr AttrubutesEnum.DEXTERITY/STRENGTH/INTELLIGENCE
      * @return Value of Attribute
      */
+    /*
     public int get(AttributesEnum attr) {
         if (attr == AttributesEnum.DEXTERITY){
             return Armor.dexterity;
@@ -56,6 +57,9 @@ public abstract class Item {
             return Armor.strength;
         }
         return 0;
+
+
     }
+    */
 }
 

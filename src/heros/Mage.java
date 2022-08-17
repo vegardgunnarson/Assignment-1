@@ -8,6 +8,7 @@ public class Mage extends Hero{
         super(name);
         legalWeapon.put(WeaponType.STAFF,true);
         legalWeapon.put(WeaponType.WAND,true);
+        
         legalArmor.put(ArmorType.CLOTH,true);
     }
 }

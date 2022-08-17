@@ -21,16 +21,26 @@ public class Armor extends Item{
         this.type = type;
     }
 
+    /**
+     * Returns attribute given from AttributesEnum
+     * @param equipment map of equipment
+     * @param attr attributesEnum
+     * @return
+     */
     public static int getEquipmentMainStat(HashMap<Enum, Item> equipment, AttributesEnum attr) {
         int mainStat = 0;
+
         if (equipment.get(Slot.BODY)!=null){
-            mainStat+=equipment.get(Slot.BODY).get(attr);
+            Armor a = (Armor) equipment.get(Slot.BODY);
+            mainStat+=a.get(attr);
         }
         if (equipment.get(Slot.HEAD)!=null){
-            mainStat+=equipment.get(Slot.HEAD).get(attr);
+            Armor a = (Armor) equipment.get(Slot.HEAD);
+            mainStat+=a.get(attr);
         }
         if (equipment.get(Slot.LEGS)!=null){
-            mainStat+=equipment.get(Slot.LEGS).get(attr);
+            Armor a = (Armor) equipment.get(Slot.LEGS);
+            mainStat+=a.get(attr);
         }
 
         return mainStat;

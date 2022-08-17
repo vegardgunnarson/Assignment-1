@@ -38,7 +38,10 @@ public class Main {
         Vegard.equipArmor(kropp);
         System.out.println("Weapon damage: "+Wand_1.getDamage());
         Vegard.getStats();
-        Vegard.getItems();
+        Vegard.setLevel(1);
+        hjelm.setDexterity(5);
+        System.out.println(Vegard.getDexterity());
+
 
 
 

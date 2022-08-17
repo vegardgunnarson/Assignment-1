@@ -32,15 +32,16 @@ public class WeaponTests {
     }
 
     /**
+     * Test 3 from assignment 1
      * Mage tries to equip illegal weapon (Mage can only use Staff and Wand)
      */
     @Test
     public void weaponExceptionIllegalTest() {
-        Mage testMage = new Mage("Vegard");
+        Warrior testWarrior = new Warrior("Vegard");
 
         String expected = "Invalid weapon";
 
-        Exception exception = assertThrows(InvalidWeaponException.class,() ->  testMage.equipWeapon(testWeapon1));
+        Exception exception = assertThrows(InvalidWeaponException.class,() ->  testWarrior.equipWeapon(testWeapon2));
         String actual = exception.getMessage();
 
         assertEquals(expected,actual);
@@ -56,6 +57,7 @@ public class WeaponTests {
         testWarrior.setLevel(1);
         testWeapon1.setReqLevel(2);
         String expected = "Invalid weapon";
+
         Exception exception = assertThrows(InvalidWeaponException.class,() ->  testWarrior.equipWeapon(testWeapon1));
         String actual = exception.getMessage();
 

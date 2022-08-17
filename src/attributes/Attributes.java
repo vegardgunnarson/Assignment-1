@@ -11,32 +11,9 @@ import heros.Warrior;
  */
 
 public class Attributes {
-    
-    int dexterity;
-    int intelligence;
-    int strength;
 
-    /*
-    public Attributes(int strength, int dexterity, int intelligence){
-        this.intelligence=intelligence;
-        this.dexterity=dexterity;
-        this.strength=strength;
-    }
-
-    public int getIntelligence() {
-        return this.intelligence;
-    }
-
-    public int getDexterity() {
-        return this.dexterity;
-    }
-
-    public int getStrength() {
-        return this.strength;
-    }
-     */
     /**
-     * Return Hero Damage
+     * Calculate Hero Damage
      * @param hero Any hero-class
      * @param level Any int
      * @param weaponDmg Any int
