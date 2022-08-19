@@ -10,6 +10,8 @@
 
 [Maintainers](#Maintainers)
 
+[Licence](#Licence)
+
 
 ## Background 
 
@@ -50,7 +52,7 @@ and armors:
 
 ### Structure for source files and tests <br />
 ```
-.
+src
 |-- Main.java         			
 |-- attributes
 |   `-- Attributes.java
@@ -72,6 +74,15 @@ and armors:
     |-- Armor.java
     |-- Item.java
     `-- Weapon.java
+tests
+|-- heros
+|   |-- MageTests.java
+|   |-- WarriorTest.java
+|   `-- heroAttributeTests.java
+`-- items
+    |-- ArmorTests.java
+    `-- WeaponTests.java
+
 ```
 
 ## Install
@@ -84,4 +95,8 @@ Right click on tests-folder and choose Run 'All Tests'
 
 ## Maintainers
 Vegard Gunnarson
+
+## Licence
+Open
+
 		
